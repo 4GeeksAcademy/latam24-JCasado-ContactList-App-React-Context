@@ -29,7 +29,7 @@ export const Demo = () => {
 			  setNewContactData(data);
 			})
 			.catch((error) => {
-			  console.log("Error uploading contact details:", error);
+			  console.log("Error al cargar los detalles del contacto:", error);
 			});
 		}
 	  }, [isEditing, contactId]);
@@ -56,7 +56,7 @@ export const Demo = () => {
 
 	return (
 		<div className="container mt-5">
-			<h1 className="text-center">Add/update a new contact</h1>
+			<h1 className="text-center">Add/Update a new contact</h1>
 			<form onSubmit={handleSubmit}>
 				<div className="mb-3">
 					<label htmlFor="fullname" className="form-label">Full name</label>
@@ -135,7 +135,7 @@ export const Demo = () => {
 			</form>
 			<br />
 			<Link to="/">
-				<div className="link">Get back to contacts</div>
+				<div className="link">Go back to your contacts</div>
 			</Link>
 		</div>
 	);
