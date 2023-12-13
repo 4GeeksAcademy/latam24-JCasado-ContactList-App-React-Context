@@ -44,7 +44,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.log(error)
 				}
 			},
-			deleteContact: async (contactId) => {
+			deleteContact: async (contactId) => { 
+
+				const actions = getActions();
+
 				try {
 					const API_URL = `https://playground.4geeks.com/apis/fake/contact/${contactId}`;
 					const requestConfig = {
@@ -53,9 +56,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					const response = await fetch(API_URL, requestConfig);
 		
 					if (response.status === 201) {
-						console.log("Contacto eliminado con éxito.");
+						console.log("Contact deleted successfully.");
 		
 						actions.getAgenda();
+
 					} else {
 						console.log("Error en la solicitud. Code: ", response.status);
 					}
@@ -80,6 +84,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 			updateContact: async (contactId, updatedContactData) => {
+				
+				console.log(contactId);
+
 				try {
 					const API_URL = `https://playground.4geeks.com/apis/fake/contact/${contactId}`;
 					const requestConfig = {
