@@ -4,8 +4,6 @@ import { useLocation } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 
-import "../../styles/demo.css";
-
 export const Demo = () => {
 	const { actions } = useContext(Context);
 	const location = useLocation();
@@ -29,7 +27,7 @@ export const Demo = () => {
 			  setNewContactData(data);
 			})
 			.catch((error) => {
-			  console.log("Error al cargar los detalles del contacto:", error);
+			  console.log("Error uploading contact Id:", error);
 			});
 		}
 	  }, [isEditing, contactId]);
