@@ -35,7 +35,7 @@ export const Card = ({data}) => {
                     </div>
                     <div className="col-md-2">
                         <div className="card-body text-end">  
-                            <Link to={`/demo/edit${data.id}`}>
+                            <Link to={`/edit/${data.id}`}>
                                 <i className="fa-solid fa-pen me-3"></i>
                             </Link>
                             <button className="fa-solid fa-trash-can me-2" onClick={() => actions.deleteContact(data.id)} style={{ cursor: "pointer" }}></button>
