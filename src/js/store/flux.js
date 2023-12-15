@@ -71,8 +71,8 @@ const getState = ({ getActions, setStore }) => {
 				try {
 					const API_URL = `https://playground.4geeks.com/apis/fake/contact/${contactId}`;
 					const response = await fetch(API_URL);
-			
-					if (response.status === 204) {
+					
+					if (response.status === 200) {
 						const contactData = await response.json();
 						return contactData;
 					} else {

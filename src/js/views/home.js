@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import { Context } from "../store/appContext"; 
-import { Card }  from "../component/card"
+import { Card }  from "../component/card.jsx"
 import { Link } from "react-router-dom";
 
 export const Home = () => {

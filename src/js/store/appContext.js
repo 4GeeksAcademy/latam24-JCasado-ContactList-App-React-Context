@@ -19,10 +19,6 @@ const injectContext = PassedComponent => {
 
 		useEffect(() => {
 			state.actions.getAgenda()
-			state.actions.newContact()
-			state.actions.deleteContact()
-			state.actions.getContactById()
-			state.actions.updateContact()
 			
 		}, []);
 
